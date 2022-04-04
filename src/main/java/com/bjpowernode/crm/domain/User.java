@@ -9,6 +9,7 @@ public class User {
     /**
      * 关于登录
      *      select count(*) from tbl_user loginAct =? and loginPwd = ? 只能判断账号合不合法不能判断 是否还有用
+     *
      */
     private String id ;//主键
     private String loginAct;//登陆账号

@@ -1,4 +1,7 @@
 package com.bjpowernode.crm.exception;
 
-public class LoginException  {
+public class LoginException extends Exception {
+    public LoginException(String msg) {
+        super(msg);
+    }
 }
