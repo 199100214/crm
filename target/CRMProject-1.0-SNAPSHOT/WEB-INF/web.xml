@@ -13,6 +13,6 @@
       </servlet>
       <servlet-mapping>
         <servlet-name>UserController</servlet-name>
-        <url-pattern>/user/xx.do</url-pattern>
+        <url-pattern>/user/login.do</url-pattern>
       </servlet-mapping>
 </web-app>

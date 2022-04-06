@@ -7,10 +7,8 @@
  id:表示执行sql语句的唯一标识符 mybatis会使用这个id来找到要执行的sql语句
  resultType:表示结果类型，表示sql语句执行之后的返回的java对象的类型
  值显示的类型的全限定名称-->
-    <select id="" resultType="">
-
+    <select id="login" resultType="User">
+        select * from tbl_user where loginAct = #{loginAct} and loginPwd = #{loginPwd}
     </select>
-    <insert id="">
 
-    </insert>
 </mapper>

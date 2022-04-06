@@ -16,6 +16,7 @@ To change this template use File | Settings | File Templates.
 		$(function(){
 			$("#loginAct").focus();
 			$("#SubmitBtn").click(function () {
+				// alert("aaa");
 				login();
 			});
 			//获取的键盘的keyCodee
@@ -23,7 +24,7 @@ To change this template use File | Settings | File Templates.
 			// 	alert(event.keyCode);
 			// });
 			$(window).keydown(function (event) {
-				if(event.keyCode == 13){
+				if(event.keyCode === 13){
 					login();
 				}
 			});
@@ -31,9 +32,35 @@ To change this template use File | Settings | File Templates.
 			function login() {
 				const loginAct = $.trim($("#loginAct").val());
 				const loginPwd = $.trim($("#loginPwd").val());
-				if (loginAct == "" || loginPwd == ""){
+				if (loginAct === "" || loginPwd === ""){
 					$("#msg").html("账号密码不能为空");
+					//如果账号密码为空 则需要及时强行终止该方法
+					return false;
 				}
+				//去后台验证登陆相关的操作
+				$.ajax({
+					url:"${pageContext.request.contextPath}/user/login.do",
+					data:{
+						"loginAct":loginAct,
+						"loginPwd":loginPwd
+					},
+					type:"post",
+					dataType:"json",
+					success(data){
+						//data是后台所提供的
+						//data{"statu":true/false,"msg":"错误的原因"}
+						if(data.success){
+							// alert("chengg");
+							window.location.href="settings/index.html";
+						}else{
+							// $("#msg").html("账号密码有误，请重新输入");
+							$("#msg").html(data.msg);
+						}
+					},
+					error(){
+						alert("出错了");
+					}
+				})
 			}
 		})
 	</script>

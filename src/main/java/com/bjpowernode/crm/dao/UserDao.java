@@ -1,5 +1,9 @@
 package com.bjpowernode.crm.dao;
 
-public interface UserDao {
+import com.bjpowernode.crm.domain.User;
 
+import java.util.Map;
+
+public interface UserDao {
+    User login(Map<String,Object> map);
 }
