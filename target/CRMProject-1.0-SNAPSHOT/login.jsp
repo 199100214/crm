@@ -24,7 +24,7 @@ To change this template use File | Settings | File Templates.
 			// 	alert(event.keyCode);
 			// });
 			$(window).keydown(function (event) {
-				if(event.keyCode == 13){
+				if(event.keyCode === 13){
 					login();
 				}
 			});
@@ -50,8 +50,8 @@ To change this template use File | Settings | File Templates.
 						//data是后台所提供的
 						//data{"statu":true/false,"msg":"错误的原因"}
 						if(data.success){
-							alert("chengg");
-							window.location.href="settings/index.html";
+							// alert("chengg");
+							window.location.href="workbench/index.jsp";
 						}else{
 							// $("#msg").html("账号密码有误，请重新输入");
 							$("#msg").html(data.msg);
@@ -78,7 +78,7 @@ To change this template use File | Settings | File Templates.
 			<div class="page-header">
 				<h1>登录</h1>
 			</div>
-			<form action="workbench/index.html" class="form-horizontal" role="form">
+			<form action="workbench/index.jsp" class="form-horizontal" role="form">
 				<div class="form-group form-group-lg">
 					<div style="width: 350px;">
 						<input class="form-control" type="text" placeholder="用户名" id="loginAct">

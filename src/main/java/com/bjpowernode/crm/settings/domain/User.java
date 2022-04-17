@@ -1,4 +1,4 @@
-package com.bjpowernode.crm.domain;
+package com.bjpowernode.crm.settings.domain;
 
 public class User {
     /**

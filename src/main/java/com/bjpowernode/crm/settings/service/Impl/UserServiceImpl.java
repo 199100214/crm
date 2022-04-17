@@ -1,11 +1,10 @@
-package com.bjpowernode.crm.service.Impl;
+package com.bjpowernode.crm.settings.service.Impl;
 
-import com.bjpowernode.crm.dao.UserDao;
-import com.bjpowernode.crm.domain.User;
-import com.bjpowernode.crm.exception.LoginException;
-import com.bjpowernode.crm.service.UserService;
+import com.bjpowernode.crm.settings.dao.UserDao;
+import com.bjpowernode.crm.settings.domain.User;
+import com.bjpowernode.crm.settings.exception.LoginException;
+import com.bjpowernode.crm.settings.service.UserService;
 import com.bjpowernode.crm.util.SqlSessionUtil;
-import org.apache.ibatis.session.SqlSession;
 
 import java.util.HashMap;
 import java.util.Map;

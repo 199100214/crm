@@ -5,7 +5,7 @@
 <configuration>
     <properties resource="jdbc.properties" />
     <typeAliases>
-        <package name="com.bjpowernode.crm.domain"/>
+        <package name="com.bjpowernode.crm.settings.domain"/>
     </typeAliases>
 
     <environments default="mybatis01">

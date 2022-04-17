@@ -1,8 +1,8 @@
 package com.bjpowernode.crm.web.controller;
 
-import com.bjpowernode.crm.domain.User;
-import com.bjpowernode.crm.service.Impl.UserServiceImpl;
-import com.bjpowernode.crm.service.UserService;
+import com.bjpowernode.crm.settings.domain.User;
+import com.bjpowernode.crm.settings.service.Impl.UserServiceImpl;
+import com.bjpowernode.crm.settings.service.UserService;
 import com.bjpowernode.crm.util.MD5Util;
 import com.bjpowernode.crm.util.PrintJson;
 import com.bjpowernode.crm.util.ServiceFactory;
